@@ -1,3 +1,15 @@
+server:
+  port: 9999
+
+smt:
+  security:
+    oauth2:
+      resource:
+        keystore:
+          location: "classpath:keystore.jks"
+          # Joke's on you, this isn't the real password.
+          password: ${smt.security.oauth2.resource.keystore.password}
+          keypair: SMARTRAC
 
 info:
   component: Auth Server
@@ -7,6 +19,6 @@ server:
 
 logging:
   level:
-    ROOT: info
+    ROOT: INFO
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG

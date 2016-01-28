@@ -1,6 +1,9 @@
 info:
   component: Zuul Server
 
+server:
+  port: 8765
+
 endpoints:
   restart:
     enabled: true
