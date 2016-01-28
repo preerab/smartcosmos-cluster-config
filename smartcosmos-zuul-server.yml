@@ -9,6 +9,12 @@ endpoints:
   health:
     sensitive: false
 
+security:
+    oauth2:
+      resource:
+        userInfoUri: http://localhost:9999/uaa/user
+        preferTokenInfo: false
+
 zuul:
   ignoredServices: "*"
   prefix: /rest

@@ -1,24 +1,3 @@
-security:
-    user:
-      password: password
-    oauth2:
-      resource:
-        jwt:
-          keyValue: |
-            -----BEGIN RSA PUBLIC KEY-----
-            MIICCgKCAgEAuG9+4XlbnNLPn5JFwusSSPhce4Whr7vRoGqhzDGLXIIMaT7ys/Y1
-            o5mQr+1LrIE1kpMHQ9hNCxfe8PIwdkA7Sjs9uUKlxywrQgEDyLeQKvOCc/IUylIP
-            5l04s0BukcofkgYFp4S8MWjuZPPQ5Et1folZevi7tLXISGqojeOBhBBnQQImDso4
-            HB9hxCa5uLrjvA7DhThyRD9DU3OgDDrA/wCTtd28FUHOjYyWvxX5mJcbrRY8nBv0
-            ysOjqf3T9zbhJQSRJXK+eAT7Hql3BsG9I9E2n/cEuFZOtSYZ6vSkbeP5HGPe0Uh2
-            uNrqQX7b7rCydUAarUeMKzchKxu4OAu7qKt3J6jC9NSOSyEQHGMKaKIglVqWMlSl
-            s4vRjB3SuF2hQ4zluGtXfMcjgRXFZ+SrEnTNOhbXnVz9FbMLm8rijSyzr+SaNKdN
-            szaXzQXKiLlaCegj7byg8X6HoYKdLdFGrcYMePZ/DiphIbEcH6q71asjiSbvg9U5
-            6tbZunknE5MHPpv7HEnvg33GbdNLjHTTF4HkOlljh99/kmBiENtkz/pK2McVoO9Y
-            9/QUexn+u8NJQ7XUUroavn4D5ps777IslWWItu0WYMnVdSm0y5j9+Zod1/P807fJ
-            viQTWagPXFloWRUbypF+oqyhX6hmy6e6q56DLuuzibT4B9HA/8gH/SECAwEAAQ==
-            -----END RSA PUBLIC KEY-----
-
 
 info:
   component: Auth Server
@@ -28,5 +7,6 @@ server:
 
 logging:
   level:
-    ROOT: INFO
+    ROOT: info
+    org.springframework.security: DEBUG
     org.springframework.web: DEBUG
