@@ -8,3 +8,15 @@ security:
     resource:
       userInfoUri: http://localhost:9999/uaa/user
       preferTokenInfo: false
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/devkit?autoReconnect=true
+    username: cosmos
+    password: dev
+    driver-class-name: com.mysql.jdbc.Driver
+
+# XXX Super dangerous to let this get to production.
+  jpa:
+    hibernate:
+      ddl-auto: update
