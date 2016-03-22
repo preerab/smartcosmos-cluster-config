@@ -1,0 +1,12 @@
+server:
+  port: 45037
+
+security:
+  user:
+    password: password
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
+      preferTokenInfo: false
+
+# XXX All Mongo values are default, do not use in production!

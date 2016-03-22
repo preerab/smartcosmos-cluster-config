@@ -1,20 +1,20 @@
-server:
-  port: 9999
-
-smt:
+smartcosmos:
   security:
     oauth2:
       resource:
         keystore:
-          location: "classpath:keystore.jks"
-          # Joke's on you, this isn't the real password.
-          password: ${smt.security.oauth2.resource.keystore.password}
-          keypair: SMARTRAC
+          location: "classpath:smartcosmos.jks"
+          password: '{cipher}cbe4de5a96b0fcb880d8a98e735ea02393cde3a519a5b4424d1cfc7f2ba5c2df'
+          keypair: smartcosmosdev
+          keypairPassword: '{cipher}00bc63a48db23ec844932c74b5a0afa9e8cecff87f932cac1a462299d46478c5'
+        clientId: '{cipher}ef4e264a69ea97cf574bc96b7bcf364af4a9ab61fb2ad17097e88311d2878eb42e265b0a05e46c3f1ed9172ee1e335fd'
+        clientSecret: '{cipher}af7a1662ba0d19daf3f5e3ab2da8947f243ba3bc14d889d21627223bbed726f8e7ac793a8952c00367343918134daef8'
 
 info:
   component: Auth Server
 
 server:
+  port: 9999
   contextPath: /uaa
 
 logging:

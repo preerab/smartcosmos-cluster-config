@@ -1,3 +1,6 @@
+server:
+  port: 0
+
 info:
   description: SMART COSMOS Cluster Services
   url: https://www.smart-cosmos.com/
@@ -8,10 +11,39 @@ eureka:
 management:
   port: 0
 
-server:
-  port: 0
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: '{cipher}ef4e264a69ea97cf574bc96b7bcf364af4a9ab61fb2ad17097e88311d2878eb42e265b0a05e46c3f1ed9172ee1e335fd'
+      clientSecret: '{cipher}af7a1662ba0d19daf3f5e3ab2da8947f243ba3bc14d889d21627223bbed726f8e7ac793a8952c00367343918134daef8'
+    resource:
+      jwt:
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhLD+JUbjIKXzIJECP19V
+          EKW5MQCFM7sIRiHeEgSh9pSpcn0W2fyDgUfZuSgWp6GCjmRaTrFwVt9zhUrOC/Nq
+          VyaYvV5nwqaNv02CkAMpRBWpFKcdMdx2mMjDGvklY2BIvG8X/9BWUhWyvX5Ye0Vb
+          MLIfcg2sLcqJQ/tpB9GAZJGitjP051KEJuOodrZTUQwrcz7cIUQGsT3jau5WjyIm
+          wc7WG5jExUkXMcdRIo9eQAMNfl/PpW1eb648Tymmj4C4pT5DTYIjF0p6V+TSCfaP
+          H7qQPYIAx4HfKd74sY/0Jom42Vml4YnNZuDQWm9Z+K79MI3GQXbXB/Rng+fAwilf
+          PQIDAQAB
+          -----END PUBLIC KEY-----
 
 spring:
   redis:
     host: ${EVENT_SERVER_URL:localhost}
     password:
+
+  jackson:
+    deserialization:
+      ACCEPT_SINGLE_VALUE_AS_ARRAY: true
+
+  cloud:
+    stream:
+      bindings:
+        smartcosmoseventsoutput:
+          destination: "smartcosmos:events"
+        smartcosmoseventsinput:
+          destination: "smartcosmos:events"

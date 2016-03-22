@@ -4,10 +4,6 @@ server:
 security:
   user:
     password: password
-  oauth2:
-    resource:
-      userInfoUri: http://localhost:9999/uaa/user
-      preferTokenInfo: false
 
 spring:
   datasource:
