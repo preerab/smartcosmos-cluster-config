@@ -16,3 +16,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework:
+      boot.autoconfigure.security.oauth2: TRACE
+      security.oauth2: DEBUG

@@ -26,4 +26,6 @@ zuul:
 logging:
   level:
     ROOT: INFO
-    org.springframework.web: DEBUG
+    org.springframework:
+      boot.autoconfigure.security.oauth2: TRACE
+      security.oauth2: DEBUG
