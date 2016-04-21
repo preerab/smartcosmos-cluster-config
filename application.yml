@@ -47,3 +47,10 @@ spring:
           destination: "smartcosmos:events"
         smartcosmoseventsinput:
           destination: "smartcosmos:events"
+
+logging:
+  level:
+    ROOT: INFO
+    com.netflix:
+      eureka.registry: WARN
+      discovery.shared.resolver.aws.ConfigClusterResolver: WARN

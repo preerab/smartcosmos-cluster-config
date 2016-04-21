@@ -2,6 +2,7 @@ info:
   component: Auth Server
 
 smartcosmos:
+  debug: false
   security:
     resource:
       keystore:

@@ -11,15 +11,18 @@ spring:
     username: cosmos
     password: dev
     driver-class-name: com.mysql.jdbc.Driver
-
 # XXX Super dangerous to let this get to production.
   jpa:
     hibernate:
       ddl-auto: update
 
+smartcosmos:
+  security:
+    enabled: true
+
 logging:
   level:
     ROOT: INFO
-    org.springframework:
-      boot.autoconfigure.security.oauth2: TRACE
-      security.oauth2: DEBUG
+    net.smartcosmos: TRACE
+    org.springframework.security: TRACE
+    com.netflix.eureka.registry: WARN
