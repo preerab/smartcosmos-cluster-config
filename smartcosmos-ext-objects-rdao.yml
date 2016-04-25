@@ -10,7 +10,7 @@ spring:
     url: jdbc:mysql://localhost/devkit?autoReconnect=true
     username: cosmos
     password: dev
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver
 # XXX Super dangerous to let this get to production.
   jpa:
     hibernate:
