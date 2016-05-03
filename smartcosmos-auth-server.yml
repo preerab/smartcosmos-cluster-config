@@ -21,9 +21,7 @@ smartcosmos:
 
 server:
   port: 9999
-  contextPath: /uaa
 
 logging:
   level:
     ROOT: INFO
-    net.smartcosmos.cluster: TRACE
