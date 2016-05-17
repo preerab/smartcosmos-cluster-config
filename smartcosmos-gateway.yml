@@ -4,18 +4,6 @@ info:
 server:
   port: 8765
 
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
-
-security:
-  user:
-    password: password
-
 zuul:
   sensitiveHeaders:
   ignoredServices: "*"
@@ -23,8 +11,9 @@ zuul:
   routes:
     smartcosmos-ext-objects-rdao: /objects/**
     smartcosmos-ext-metadata-rdao: /metadata/**
-    user:
-      path: /user/**
+    oauth:
+      path: /oauth/**
+      stripPrefix: false
       url: ${smartcosmos.authorization-server}
 
 logging:

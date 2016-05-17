@@ -1,6 +1,14 @@
 info:
   component: Auth Server
 
+security:
+  oauth2:
+    client:
+      accessTokenUri:
+      user-authorization-uri:
+      client-id:
+      client-secret:
+
 smartcosmos:
   debug: false
   security:
