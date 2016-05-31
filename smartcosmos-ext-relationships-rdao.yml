@@ -1,0 +1,34 @@
+# Relationships RDAO Configuration
+
+server:
+  port: 45369
+
+security:
+  user:
+    password: password
+
+spring:
+  datasource:
+    #
+    # CREATE DATABASE devkit;  GRANT ALL PRIVILEGES ON devkit.* TO 'cosmos'@'localhost' IDENTIFIED BY 'dev';  FLUSH PRIVILEGES;
+    #
+    url: jdbc:mysql://localhost/devkit?autoReconnect=true
+    username: cosmos
+    password: dev
+    driver-class-name: org.mariadb.jdbc.Driver
+# XXX Super dangerous to let this get to production.
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
+
+smartcosmos:
+  security:
+    enabled: true
+
+logging:
+  level:
+    ROOT: INFO
+    net.smartcosmos: TRACE
+    org.springframework.security: TRACE
+    com.netflix.eureka.registry: WARN
