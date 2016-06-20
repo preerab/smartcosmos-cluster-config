@@ -1,5 +1,7 @@
+# Relationships RDAO Configuration
+
 server:
-  port: 45336
+  port: 45369
 
 security:
   user:
