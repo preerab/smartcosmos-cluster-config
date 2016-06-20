@@ -18,8 +18,8 @@ management:
 security:
   oauth2:
     client:
-      accessTokenUri: ${smart=cosmos.authorization-server}/oauth/token
-      user-authorization-uri: ${smart=cosmos.authorization-server}/oauth/authorize
+      accessTokenUri: ${smart-cosmos.authorization-server}/oauth/token
+      user-authorization-uri: ${smart-cosmos.authorization-server}/oauth/authorize
       client-id: '{cipher}ef4e264a69ea97cf574bc96b7bcf364af4a9ab61fb2ad17097e88311d2878eb42e265b0a05e46c3f1ed9172ee1e335fd'
       client-secret: '{cipher}af7a1662ba0d19daf3f5e3ab2da8947f243ba3bc14d889d21627223bbed726f8e7ac793a8952c00367343918134daef8'
     resource:
