@@ -1,5 +1,5 @@
 server:
-  port: 45336
+  port: 8080
 
 security:
   user:
@@ -10,7 +10,7 @@ spring:
     #
     # CREATE DATABASE devkit;  GRANT ALL PRIVILEGES ON devkit.* TO 'cosmos'@'localhost' IDENTIFIED BY 'dev';  FLUSH PRIVILEGES;
     #
-    url: jdbc:mysql://localhost/devkit?autoReconnect=true
+    url: jdbc:mysql://mysql-ext-things/devkit?autoReconnect=true
     username: cosmos
     password: dev
     driver-class-name: org.mariadb.jdbc.Driver

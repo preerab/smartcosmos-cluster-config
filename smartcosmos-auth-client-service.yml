@@ -1,5 +1,5 @@
 server:
-  port: 41000
+  port: 80
 security:
   basic:
     enabled:  false

@@ -2,7 +2,7 @@ info:
   component: Zuul Server
 
 server:
-  port: 8765
+  port: 8080
 
 zuul:
   sensitiveHeaders:

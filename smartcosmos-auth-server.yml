@@ -28,7 +28,7 @@ smartcosmos:
           location-uri: http://smartcosmos-user-details-service
 
 server:
-  port: 9999
+  port: 8080
 
 logging:
   level:
