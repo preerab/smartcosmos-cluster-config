@@ -2,7 +2,7 @@ server:
   port: 0
 
 smartcosmos:
-  authorization-server: http://localhost:9999
+  authorization-server: http://auth-server:9999
 
 info:
   description: SMART COSMOS Cluster Services
