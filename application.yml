@@ -1,8 +1,19 @@
 server:
   port: 0
 
+kafka:
+  broker:
+    host: ${KAFKA_IP:172.17.0.3}
+    port: 9092
+    address: ${kafka.broker.host}:${kafka.broker.port}
+  zookeeper:
+    host: ${ZK_IP:172.17.0.2}
+    port: 2181
+    address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
+
 smartcosmos:
   authorization-server: http://localhost:9999
+  event-header: "urn:smartcosmos://events:"
 
 info:
   description: SMART COSMOS Cluster Services
@@ -48,10 +59,10 @@ spring:
   cloud:
     stream:
       bindings:
-        smartcosmoseventsoutput:
-          destination: "smartcosmos:events"
-        smartcosmoseventsinput:
-          destination: "smartcosmos:events"
+        smartcosmos-events-output:
+          destination: ${smart-cosmos.event-header}
+        smartcosmos-events-input:
+          destination: "${smart-cosmos.event-header}*"
 
 logging:
   level:
