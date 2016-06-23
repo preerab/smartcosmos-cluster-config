@@ -70,3 +70,6 @@ logging:
     com.netflix:
       eureka.registry: WARN
       discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+    org.apache.kafka.clients:
+      producer: WARN
+      consumer: WARN
