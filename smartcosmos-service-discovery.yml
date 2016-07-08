@@ -9,3 +9,4 @@ eureka:
     fetchRegistry: false
   server:
     waitTimeInMsWhenSyncEmpty: 4
+    enable-self-preservation: false
