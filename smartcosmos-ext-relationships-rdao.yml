@@ -1,7 +1,7 @@
 # Relationships RDAO Configuration
 
 server:
-  port: 45369
+  port: 8080
 
 security:
   user:
@@ -12,7 +12,7 @@ spring:
     #
     # CREATE DATABASE devkit;  GRANT ALL PRIVILEGES ON devkit.* TO 'cosmos'@'localhost' IDENTIFIED BY 'dev';  FLUSH PRIVILEGES;
     #
-    url: jdbc:mysql://localhost/devkit?autoReconnect=true
+    url: jdbc:mysql://mysql/devkit?autoReconnect=true
     username: cosmos
     password: dev
     driver-class-name: org.mariadb.jdbc.Driver
