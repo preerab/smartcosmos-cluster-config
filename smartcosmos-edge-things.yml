@@ -1,5 +1,5 @@
 server:
-  port: 50594
+  port: 8080
 
 security:
   user:
