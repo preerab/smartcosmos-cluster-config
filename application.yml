@@ -13,7 +13,8 @@ kafka:
 
 smartcosmos:
   authorization-server: http://localhost:9999
-  event-header: "urn:smartcosmos://events:"
+  events:
+    header: "urn:smartcosmos://events:"
 
 info:
   description: SMART COSMOS Cluster Services
@@ -55,14 +56,6 @@ spring:
   jackson:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
-
-  cloud:
-    stream:
-      bindings:
-        smartcosmos-events-output:
-          destination: ${smart-cosmos.event-header}
-        smartcosmos-events-input:
-          destination: "${smart-cosmos.event-header}*"
 
 logging:
   level:
