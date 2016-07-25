@@ -10,8 +10,8 @@ smartcosmos:
   profiles:
     stormpath:
       applicationName: Profiles
-      apiKey.id: asdf
-      apiKey.secret: asdf
+      apiKeyId: asdf
+      apiKeySecret: asdf
 
 logging:
   level:
