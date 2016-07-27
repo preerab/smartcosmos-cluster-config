@@ -7,11 +7,9 @@ smartcosmos:
   security:
     enabled: true
 
-  profiles:
-    stormpath:
-      applicationName: Profiles
-      apiKeyId: asdf
-      apiKeySecret: asdf
+  stormpath:
+    applicationName: Profiles
+    apiKeyFileLocation: /opt/smartcosmos/.stormpath/apiKey.properties
 
 logging:
   level:
