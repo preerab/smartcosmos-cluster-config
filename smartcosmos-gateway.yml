@@ -9,8 +9,10 @@ zuul:
   ignoredServices: "*"
   prefix: /rest
   routes:
-    smartcosmos-edge-things: /objects/**
+    smartcosmos-edge-things: /things/**
     smartcosmos-ext-metadata-rdao: /metadata/**
+    smartcosmos-ext-relationships-rdao: /relationships/**
+    smartcosmos-edge-user-devkit: /admin/**
     oauth:
       path: /oauth/**
       stripPrefix: false
