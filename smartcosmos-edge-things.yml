@@ -12,7 +12,7 @@ smartcosmos:
   edge:
     things:
       local:
-        things: smartcosmos-ext-things-rdao
+        things: smartcosmos-ext-things
         metadata: smartcosmos-ext-metadata-rdao
 
 logging:
