@@ -1,0 +1,19 @@
+#Unity Sunrise property value used to connect Sunrise server
+#TODO:  add profile eg: profile: development , profile: production...
+# endpoint: Unity Sunrise endpoint for JSON transaction
+# appname: Applicaion name registered with Allscript to access sandbox
+
+# TODO Set profile
+  # profiles: dev
+  # name: devenv
+  #unity:
+  #endpoint: http://sunriselatestga.unitysandbox.com
+  endpoint: http://sunrise153.unitysandbox.com
+  appname: SMARTRACTechnologyFlet.smart-cosmos-test.TestApp
+  serverusername: SMART-8707-smartcosmo-test
+  serverpassword: Sm4Rtr@et%ahN8l7gyF0%Ts1@rt-6!
+  ehrusername: james
+  ehrpassword: Password#1
+
+   # ---- # this indicate seperate property file
+    ##### Below is for test environemnt or Prod environemnt
