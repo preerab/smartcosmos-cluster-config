@@ -13,10 +13,7 @@ zuul:
     smartcosmos-ext-metadata-rdao: /rest/metadata/**
     smartcosmos-ext-relationships-rdao: /rest/relationships/**
     smartcosmos-edge-user-devkit: /rest/user/**
-    oauth:
-      path: /oauth/**
-      stripPrefix: false
-      url: ${smartcosmos.authorization-server}
+    smartcosmos-auth-server: /oauth/**
 
 logging:
   level:
