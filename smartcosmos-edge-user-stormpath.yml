@@ -1,0 +1,19 @@
+# Stormpath Authentication Configuration
+
+server:
+  port: 45372
+
+smartcosmos:
+  security:
+    enabled: true
+
+  stormpath:
+    applicationName: Profiles
+    apiKeyFileLocation: /opt/smartcosmos/.stormpath/apiKey.properties
+
+logging:
+  level:
+    ROOT: INFO
+    net.smartcosmos: TRACE
+    org.springframework.security: TRACE
+    com.netflix.eureka.registry: WARN
