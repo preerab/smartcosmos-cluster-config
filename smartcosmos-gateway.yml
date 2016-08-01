@@ -7,10 +7,12 @@ server:
 zuul:
   sensitiveHeaders:
   ignoredServices: "*"
-  prefix: /rest
+  prefix: 
   routes:
-    smartcosmos-ext-things: /objects/**
-    smartcosmos-ext-metadata-rdao: /metadata/**
+    smartcosmos-edge-things: /rest/things/**
+    smartcosmos-ext-metadata-rdao: /rest/metadata/**
+    smartcosmos-ext-relationships-rdao: /rest/relationships/**
+    smartcosmos-edge-user-devkit: /rest/user/**
     oauth:
       path: /oauth/**
       stripPrefix: false

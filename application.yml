@@ -1,5 +1,7 @@
 server:
   port: 0
+  session:
+    timeout: 60000
 
 kafka:
   broker:
@@ -13,8 +15,7 @@ kafka:
 
 smartcosmos:
   authorization-server: http://localhost:9999
-  events:
-    header: "urn:smartcosmos://events:"
+  event-header: "urn:smartcosmos://events:"
 
 info:
   description: SMART COSMOS Cluster Services
@@ -56,6 +57,18 @@ spring:
   jackson:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
+
+  mvc:
+    async:
+      request-timeout: 60000
+
+  cloud:
+    stream:
+      bindings:
+        smartcosmos-events-output:
+          destination: ${smart-cosmos.event-header}
+        smartcosmos-events-input:
+          destination: "${smart-cosmos.event-header}*"
 
 logging:
   level:
