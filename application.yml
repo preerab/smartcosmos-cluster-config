@@ -14,7 +14,7 @@ kafka:
     address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
 
 smartcosmos:
-  authorization-server: http://smartcosmos-auth-server
+  authorization-server: http://auth-server:8080
   event-header: "urn:smartcosmos://events:"
 
 info:
