@@ -24,4 +24,5 @@ logging:
     com.netflix.zuul: DEBUG
     org.springframework:
       boot.autoconfigure.security.oauth2: TRACE
-      security.oauth2: DEBUG
+      security: DEBUG
+    com.netflix.zuul: DEBUG
