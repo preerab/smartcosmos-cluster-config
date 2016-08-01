@@ -7,15 +7,14 @@ server:
 zuul:
   sensitiveHeaders:
   ignoredServices: "*"
-  prefix:
+  prefix: /rest
   routes:
-    smartcosmos-ext-things: /rest/things/**
-    smartcosmos-ext-metadata-rdao: /rest/metadata/**
+    smartcosmos-ext-things: /objects/**
+    smartcosmos-ext-metadata-rdao: /metadata/**
     oauth:
       path: /oauth/**
       stripPrefix: false
       url: ${smartcosmos.authorization-server}
-    smartcosmos-ui-devkit: /**
 
 logging:
   level:
@@ -24,3 +23,22 @@ logging:
     org.springframework:
       boot.autoconfigure.security.oauth2: TRACE
       security.oauth2: DEBUG
+
+# Eventually this should be removed and the gateway should pull the auth-service config from config-server
+# directly so there is only one location for this information
+smartcosmos:
+  security:
+    resource:
+      keystore:
+        location: "classpath:smartcosmos.jks"
+        password: '{cipher}cbe4de5a96b0fcb880d8a98e735ea02393cde3a519a5b4424d1cfc7f2ba5c2df'
+        keypair: smartcosmosdev
+        keypairPassword: '{cipher}00bc63a48db23ec844932c74b5a0afa9e8cecff87f932cac1a462299d46478c5'
+      client-id: '{cipher}ef4e264a69ea97cf574bc96b7bcf364af4a9ab61fb2ad17097e88311d2878eb42e265b0a05e46c3f1ed9172ee1e335fd'
+      client-secret: '{cipher}af7a1662ba0d19daf3f5e3ab2da8947f243ba3bc14d889d21627223bbed726f8e7ac793a8952c00367343918134daef8'
+      user-details:
+        user:
+            name: '{cipher}0165d4751c3d825709dfe0882cdd7ceacd8c4873748a5315577ed0e0c760b80e64a6e12d59ebf8c153c55c1cb272e94e'
+            password: '{cipher}3a295ca2019e47f9991bf0ce434913b5be267f17e0889aa2e731d3ec9a68bab1'
+        server:
+          location-uri: http://smartcosmos-auth-server
