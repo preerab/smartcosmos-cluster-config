@@ -22,7 +22,7 @@ smartcosmos:
       client-secret: '{cipher}af7a1662ba0d19daf3f5e3ab2da8947f243ba3bc14d889d21627223bbed726f8e7ac793a8952c00367343918134daef8'
       user-details:
         user:
-          username: '{cipher}05b479a618112ef05d1e99c1b9f203405ba6d24e0ef12b76764c8af11da679f1'
+          name: '{cipher}05b479a618112ef05d1e99c1b9f203405ba6d24e0ef12b76764c8af11da679f1'
           password: '{cipher}95aa290e4fd9d380ef9fe9abb492065d1fff2b74f4c32a3aa8c8c07a7882b997'
         server:
           location-uri: http://smartcosmos-edge-user-devkit
